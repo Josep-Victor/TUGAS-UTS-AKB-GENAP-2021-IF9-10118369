@@ -3,16 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_info"
-    tools:context=".InfoFragment">
+    tools:context=".menu.info.InfoFragment">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Info Page"
-        android:textSize="20sp"
-        android:textStyle="bold"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>

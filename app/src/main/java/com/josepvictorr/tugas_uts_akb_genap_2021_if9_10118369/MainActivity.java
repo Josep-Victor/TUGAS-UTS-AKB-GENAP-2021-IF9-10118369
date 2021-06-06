@@ -1,104 +1,68 @@
 package com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.note.NoteFragment;
+import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.ProfileFragment;
+import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.info.InfoFragment;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
     // 2 Juni 2021 - 10118369 - Josep Victor Rajadoli - IF 9
 
     private BottomNavigationView bottomNavigationView;
-    private ViewPager viewPager;
-    private ViewPageAdapter viewPageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    getSupportActionBar().setTitle("Note App");
-    //menampilkan halaman yang pertama muncul
-    getFragmentPage(new ProfileFragment());
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar);
 
-    //insialisasi bottom nav
-    bottomNavigationView = findViewById(R.id.bottomNavigationView);
-    bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        //menampilkan halaman yang pertama muncul
+        getFragmentPage(new InfoFragment());
 
-    viewPager = findViewById(R.id.view_pager);
-    viewPageAdapter = new ViewPageAdapter(getSupportFragmentManager());
-    viewPager.setAdapter(viewPageAdapter);
+        //insialisasi bottom nav
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Fragment fragment = null;
 
-    viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-        }
-
-        @Override
-        public void onPageSelected(int position) {
-            switch (position){
-                case
-                    0:
-                    bottomNavigationView.getMenu().findItem(R.id.info).setChecked(true);
-                break;
-                case
-                    1:
-                    bottomNavigationView.getMenu().findItem(R.id.note).setChecked(true);
-                break;
-                case
-                    2:
-                    bottomNavigationView.getMenu().findItem(R.id.profile).setChecked(true);
-                break;
+                switch (item.getItemId()){
+                    case
+                        R.id.info:
+                        fragment = new InfoFragment();
+                    break;
+                    case
+                        R.id.note:
+                        fragment = new NoteFragment();
+                    break;
+                    case
+                        R.id.profile:
+                        fragment = new ProfileFragment();
+                    break;
+                }
+                return getFragmentPage(fragment);
             }
-        }
+        });
+    }
 
-        @Override
-        public void onPageScrollStateChanged(int state) {
-
-        }
-    });
-}
-
-    //menampilkan halaman fragment
     private boolean getFragmentPage(Fragment fragment){
-        if (fragment != null) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.page_container, fragment);
-            ft.commit();
+        if (fragment != null){
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.page_container, fragment)
+                    .commit();
             return true;
         }
         return false;
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-        switch (menuItem.getItemId()) {
-            case R.id.info:
-                viewPager.setCurrentItem(0);
-                break;
-            case R.id.note:
-                viewPager.setCurrentItem(1);
-                break;
-            case R.id.profile:
-                viewPager.setCurrentItem(2);
-                break;
-        }
-        return true;
     }
 }

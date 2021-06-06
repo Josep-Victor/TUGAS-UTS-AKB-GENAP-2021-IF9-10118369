@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TUGASUTSAKBGENAP2021IF910118369">
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

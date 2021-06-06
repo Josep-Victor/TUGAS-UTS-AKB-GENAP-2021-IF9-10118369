@@ -1,10 +1,18 @@
 <resources>
-    <string name="app_name">TUGAS-UTS-AKB-GENAP-2021-IF9-10118369</string>
+    <string name="app_name">Notes App</string>
     <string name="profile">Profile</string>
     <string name="note">Notes</string>
     <string name="info">Info</string>
     <string name="nama">Josep Victor Rajadoli</string>
-    <string name="email">Josepvictorrrrr@gmail.com</string>
+    <string name="email">josepvictorrrrr@gmail.com</string>
     <string name="kelas">IF - 9</string>
     <string name="nim">10118369</string>
+    <string name="welcome">Selamat datang di  </string>
+    <string name="page1">Page 1 of 3</string>
+    <string name="page2">Page 2 of 3</string>
+    <string name="page3">Page 3 of 3</string>
+    <string name="apa">Apa itu</string>
+    <string name="penjelasan">  Notes adalah sebuah aplikasi untuk menyimpan data catatan harian kamu, tidak hanya menyimpan, aplikasi ini juga dapat membantu kamu dalam mengelola catatan harian kamu dengan adanya fitur mengedit catatan dan juga menghapus catatan</string>
+    <string name="title_info3_1">Ayo mulai buat catatanmu</string>
+    <string name="title_info3_2">dengan cara masuk ke tab Note dan klik tombol " + "</string>
 </resources>

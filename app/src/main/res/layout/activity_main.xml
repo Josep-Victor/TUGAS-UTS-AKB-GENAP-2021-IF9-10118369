@@ -7,26 +7,20 @@
     android:id="@+id/main_activity"
     tools:context=".MainActivity">
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/page_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_above="@+id/bottomNavigationView"/>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="226dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/kotak_bottomnav"
         android:elevation="1dp"
         android:paddingHorizontal="20dp"
         app:itemIconTint="@drawable/color_selector"

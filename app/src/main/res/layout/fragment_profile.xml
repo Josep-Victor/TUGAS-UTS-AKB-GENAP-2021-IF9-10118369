@@ -3,94 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:background="@drawable/background_profile"
-    tools:context=".ProfileFragment">
+    tools:context=".menu.ProfileFragment">
 
     <LinearLayout
-        android:id="@+id/profile_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:elevation="15dp"
-        android:background="@drawable/kotak_nama">
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/foto_profile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
             android:src="@drawable/profile" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/profile_title"
+            android:layout_width="302dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_below="@id/foto_profile"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/kotak_nama"
+            android:elevation="12dp"
             android:padding="20dp"
             android:text="@string/nama"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/profile_nim"
-        android:layout_width="334dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/profile_title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:elevation="20dp"
-        android:background="@drawable/kotak_nama">
-
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/profile_nim"
+            android:layout_width="302dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
             android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:elevation="12dp"
+            android:layout_below="@id/profile_title"
+            android:background="@drawable/kotak_nama"
             android:text="@string/nim"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/profile_kelas"
-        android:layout_width="336dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/profile_nim"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:elevation="20dp"
-        android:background="@drawable/kotak_nama">
-
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/profile_kelas"
+            android:layout_width="302dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
             android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:elevation="12dp"
+            android:layout_below="@id/profile_nim"
+            android:background="@drawable/kotak_nama"
             android:text="@string/kelas"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/profile_email"
-        android:layout_width="334dp"
-        android:layout_height="100dp"
-        android:layout_below="@+id/profile_kelas"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:elevation="20dp"
-        android:background="@drawable/kotak_nama"
-        android:gravity="center">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/profile_email"
+            android:layout_width="302dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="20dp"
+            android:layout_below="@id/profile_kelas"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/kotak_nama"
+            android:elevation="12dp"
+            android:padding="15dp"
             android:text="@string/email"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold" />
     </LinearLayout>
+
 </RelativeLayout>
