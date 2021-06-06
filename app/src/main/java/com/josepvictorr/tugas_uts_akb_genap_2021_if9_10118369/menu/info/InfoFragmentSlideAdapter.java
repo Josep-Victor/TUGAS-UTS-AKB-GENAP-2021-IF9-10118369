@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import java.util.List;
 
 public class InfoFragmentSlideAdapter extends FragmentStatePagerAdapter {
+    // 5 Juni 2021 - 10118369 - Josep Victor Rajadoli - IF9
+
     private List<Fragment> fragmentList;
     public InfoFragmentSlideAdapter(@NonNull FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);

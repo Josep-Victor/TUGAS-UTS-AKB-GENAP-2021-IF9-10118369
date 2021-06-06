@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.note.NoteFragment;
+import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.note.view.NoteFragment;
 import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.ProfileFragment;
 import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.menu.info.InfoFragment;
 

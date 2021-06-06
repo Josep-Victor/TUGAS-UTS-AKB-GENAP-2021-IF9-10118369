@@ -15,4 +15,5 @@
     <string name="penjelasan">  Notes adalah sebuah aplikasi untuk menyimpan data catatan harian kamu, tidak hanya menyimpan, aplikasi ini juga dapat membantu kamu dalam mengelola catatan harian kamu dengan adanya fitur mengedit catatan dan juga menghapus catatan</string>
     <string name="title_info3_1">Ayo mulai buat catatanmu</string>
     <string name="title_info3_2">dengan cara masuk ke tab Note dan klik tombol " + "</string>
+    <string name="title_add">Tambah Catatan</string>
 </resources>

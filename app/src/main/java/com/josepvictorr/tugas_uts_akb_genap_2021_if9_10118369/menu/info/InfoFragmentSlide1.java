@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.josepvictorr.tugas_uts_akb_genap_2021_if9_10118369.R;
 
 public class InfoFragmentSlide1 extends Fragment {
+    // 5 Juni 2021 - 10118369 - Josep Victor Rajadoli - IF9
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
